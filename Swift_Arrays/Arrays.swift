@@ -31,29 +31,29 @@ var subscribers: [String] = [] //mutable array - can add delete or update elemen
 //.isEmpty:
 
 // check to see if our array isEmpty:
-func isEmpty() -> Bool {
-    return subscribers.isEmpty
+func isEmpty(_ arr: [Any]) -> Bool {
+    return arr.isEmpty
 }
 
 
 //.count:
 
 // check how many elements are in the array:
-func count() -> Int {
-    return subscribers.count
+func count(_ arr: [Any]) -> Int {
+    return arr.count
 }
 
 //.first:
 
 // get first element of array:
-func firstElement(_ arr: [Any]) -> Any? {
+func getfirstElement(_ arr: [Any]) -> Any? {
     return arr.first
 }
 
 //.last:
 
 // get last element of array:
-func lastElement(_ arr: [Any]) -> Any? {
+func getlastElement(_ arr: [Any]) -> Any? {
     return arr.last
 }
 
@@ -63,7 +63,7 @@ func lastElement(_ arr: [Any]) -> Any? {
 //print:
 
 // print the elements of an array:
-func arr_print(_ arr: [Any]) {
+func arr_print(_ arr: [String]) {
     print(arr)
 }
 
@@ -89,7 +89,7 @@ func check_element(element: String, in arr: [String]) -> Bool { //note that you 
 //.append:
 
 // "appending" element into the array - adding element to the last of the array:
-func appendElement(_ element: Any, in arr: inout [Any]) {
+func appendElement(_ element: String, in arr: inout [String]) {
     arr.append(element)
     
     // you can also append element(s) using += operator e.g:
@@ -100,29 +100,29 @@ func appendElement(_ element: Any, in arr: inout [Any]) {
 //.insert:
 
 // inserting element into the array at a specific index:
-func insertElement(_ element: Any, in arr: inout [Any], at index: Int) { // Please note the use of "inout" here.
+func insertElement(_ element: String, in arr: inout [String], at index: Int) { // Please note the use of "inout" here.
     arr.insert(element, at: index)
 }
 
 
-//.remove:
+//.remove: remove func removes the element out of the array and return it.
 
 // removing elements from the array:
-func removeElement(_  element: Any, in arr: inout [Any], at index: Int) {
-    arr.remove(at: index)
+func removeElement(in arr: inout [String], at index: Int) -> String {
+    return arr.remove(at: index)
 }
 
 // updating elements in an array:
 
 // you can use subscript to update an element in array:
-func updateElement(_ element: Any, in arr: inout [Any], at index: Int) {
+func updateElement(_ element: String, in arr: inout [String], at index: Int) {
     arr[index] = element
 }
 
 //.swapAt
 
 //moving elements in an array using swap func
-func swapElement(in arr: inout [Any], index_a: Int, with index_b: Int) {
+func swapElement(in arr: inout [String], index_a: Int, with index_b: Int) {
     arr.swapAt(index_a, index_b)
 }
 
