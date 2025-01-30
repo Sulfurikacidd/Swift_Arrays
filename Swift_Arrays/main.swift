@@ -10,6 +10,5 @@ import Foundation
 // --- Adding elements into the array:
 subscribers += ["Alice", "Bob", "Charlie", "Dory"]
 
-print(first_element);
 
 

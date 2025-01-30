@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D42F01D2D4B3B5D002723ED /* Chat_Doc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D42F01C2D4B3B5D002723ED /* Chat_Doc.swift */; };
 		5DB41B7B2D49E874001C7BEC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB41B7A2D49E874001C7BEC /* main.swift */; };
 		5DB41B822D49E89B001C7BEC /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB41B812D49E89B001C7BEC /* Arrays.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D42F01C2D4B3B5D002723ED /* Chat_Doc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat_Doc.swift; sourceTree = "<group>"; };
 		5DB41B772D49E874001C7BEC /* Swift_Arrays */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift_Arrays; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB41B7A2D49E874001C7BEC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5DB41B812D49E89B001C7BEC /* Arrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				5DB41B7A2D49E874001C7BEC /* main.swift */,
 				5DB41B812D49E89B001C7BEC /* Arrays.swift */,
+				5D42F01C2D4B3B5D002723ED /* Chat_Doc.swift */,
 			);
 			path = Swift_Arrays;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			files = (
 				5DB41B7B2D49E874001C7BEC /* main.swift in Sources */,
 				5DB41B822D49E89B001C7BEC /* Arrays.swift in Sources */,
+				5D42F01D2D4B3B5D002723ED /* Chat_Doc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,11 +18,17 @@ let evenNumbers: [Int] = [2,4,6,8,10] //immuatable array - CANNOT add delete or 
 
 var subscribers: [String] = [] //mutable array - can add delete or update element(s). Empty array cannot infer type.
 
+
+// ----------------------------------------------------------------//
+
+
+
+
 // --- Properties & methods:
-// there are many properties and methods you can use on arrays. It makes the job alot easier.
+// there are many properties and methods which you can use on arrays. It makes the job alot easier.
 
-// add elements to the array:
 
+//.isEmpty:
 
 // check to see if our array isEmpty:
 func isEmpty() -> Bool {
@@ -30,15 +36,21 @@ func isEmpty() -> Bool {
 }
 
 
+//.count:
+
 // check how many elements are in the array:
 func count() -> Int {
     return subscribers.count
 }
 
+//.first:
+
 // get first element of array:
 func firstElement(_ arr: [Any]) -> Any? {
     return arr.first
 }
+
+//.last:
 
 // get last element of array:
 func lastElement(_ arr: [Any]) -> Any? {
@@ -47,30 +59,99 @@ func lastElement(_ arr: [Any]) -> Any? {
 
 // There are .min() & .max() to check corresponding value(s).
 
+
+//print:
+
 // print the elements of an array:
 func arr_print(_ arr: [Any]) {
     print(arr)
 }
 
+//subscript[index]:
+
 // use subscript to access elements in array:
 var first_element = subscribers[0] // [index are from 0 till count - 1]
 
+
+//.contains:
+
 // checking for an element in an array:
-func check_element(element: String, in arr: [String]) -> Bool { //note that you CANNOT use Any type here as it requires hashables !!!
+func check_element(element: String, in arr: [String]) -> Bool { //note that you CANNOT use "Any" type here as it requires hashables !!!
     
     if arr.contains(element) {
         return true
     } else {
         return false
     }
-    
-//    arr.firstIndex(of: <#T##String#>)
-    
-//    arr.remove
 }
 
-// remove element from an array:
+
+//.append:
+
+// "appending" element into the array - adding element to the last of the array:
+func appendElement(_ element: Any, in arr: inout [Any]) {
+    arr.append(element)
+    
+    // you can also append element(s) using += operator e.g:
+    // arr += [element 1, element 2, element 3]
+}
 
 
+//.insert:
+
+// inserting element into the array at a specific index:
+func insertElement(_ element: Any, in arr: inout [Any], at index: Int) { // Please note the use of "inout" here.
+    arr.insert(element, at: index)
+}
 
 
+//.remove:
+
+// removing elements from the array:
+func removeElement(_  element: Any, in arr: inout [Any], at index: Int) {
+    arr.remove(at: index)
+}
+
+// updating elements in an array:
+
+// you can use subscript to update an element in array:
+func updateElement(_ element: Any, in arr: inout [Any], at index: Int) {
+    arr[index] = element
+}
+
+//.swapAt
+
+//moving elements in an array using swap func
+func swapElement(in arr: inout [Any], index_a: Int, with index_b: Int) {
+    arr.swapAt(index_a, index_b)
+}
+
+//.sort() & .sorted()
+
+// sorting an array:
+func sort_arr(arr: inout [String]) { //note the use of Strings and not Any.
+    arr.sort()
+    
+    //if you like to leave the original array untouched and return a sorted copy instead, use "sorted()" instead of sort().
+}
+
+
+// ----------------------------------------------------------------//
+
+/*
+    Run-time operations for array:
+    
+    Accessing Element: Fixed or Constant time O(1). Because array sizes are known.
+    
+    Inserting Element: Depends on the position where you add in the element:
+                        - Front = Linear time O(N) as all the elements have to move up one space.
+                        - Middle = Linear time O(N) as half the elements has to move up one space.
+                        - Last = Constant time O(1).
+    
+    Deleting Element: Same as inserting elements.
+    
+    Searching Element:  Best Case: O(1) (element found immediately at index 0).
+                        Worst/Average Case: O(n) (element not found or at the end).
+ 
+ 
+ */
